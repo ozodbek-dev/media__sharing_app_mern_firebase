@@ -1,6 +1,7 @@
 import {createGlobalStyle} from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -14,8 +15,8 @@ const GlobalStyles = createGlobalStyle`
 :root{
   --main_bg_color:rgb(15, 15, 15);
   --main_text_color:#fff;
-  --main_text_color_2:rgb(228, 227, 229);
-  --btn_color:272727;
+  --main_text_color_2:rgb(136, 136, 136);
+  --btn_color:rgb(34, 34, 34);
   --active_btn_color:#3d3d3d;
   --search_input_color:rgb(18, 18, 18);
   --red_color:#bc0c0c;
@@ -34,6 +35,9 @@ const GlobalStyles = createGlobalStyle`
 
   body{
     background-color: var(--main_bg_color);
+  }
+  .btn-hover:hover{
+    background-color:var(--btn_color) ;
   }
   
 `

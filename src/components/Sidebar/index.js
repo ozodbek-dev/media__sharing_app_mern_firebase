@@ -1,5 +1,4 @@
-import Sidebar from "./Sidebar";
-
+import Navbar from "./Sidebar";
 export {
-  Sidebar
+  Navbar
 }

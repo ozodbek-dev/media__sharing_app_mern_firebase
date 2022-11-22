@@ -1,7 +1,13 @@
-const d_flex = ()=>{
-  return ``;
+const d_flex = (dir, wrap, align, justify) => {
+  return `
+    display:flex;
+    ${dir && `flex-direction:${dir};`}
+    ${wrap && `flex-wrap:${wrap};`}
+    ${align && `align-items:${align};`}
+    ${justify && `justify-content:${justify};`}
+  `;
 }
-const d_grid = ()=>{
+const d_grid = () => {
   return ``;
 }
 
