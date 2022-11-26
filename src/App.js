@@ -1,18 +1,28 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Navbar } from './components/Sidebar';
-import { Sidebar } from './components/Navbar';
-import Home from './pages/Home';
+
+import { BrowserRouter } from 'react-router-dom'
+import { Navbar } from './components/Navbar';
+import { Sidebar } from './components/Sidebar';
+import { Main } from './pages/Main';
+import { Fragment, useState, useEffect } from 'react';
+import SidebarPanel from './components/Sidebar/SidebarPanel';
 
 function App() {
-  return (
-    <BrowserRouter>
-    <Navbar/>
-      <Sidebar />
-      <Routes>
-        <Route path='/' exact element={<Home />} />
-      </Routes>
-    </BrowserRouter>
 
+  const [activeSidebar, setActiveSidebar] = useState(true);
+  const [activeSidebarPanel, setActiveSidebarPanel] = useState(false);
+
+  return (
+    <Fragment>
+      <BrowserRouter>
+        <Navbar setActiveSidebar={setActiveSidebar} setActiveSidebarPanel={setActiveSidebarPanel} />
+      
+        <div className='content'>
+          <Sidebar active={activeSidebar} />
+          <SidebarPanel active={activeSidebarPanel} />
+          <Main active={activeSidebar}/>
+        </div>
+      </BrowserRouter>
+    </Fragment>
   );
 }
 

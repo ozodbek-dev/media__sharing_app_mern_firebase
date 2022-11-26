@@ -1,7 +1,6 @@
 import {createGlobalStyle} from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -14,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
 
 :root{
   --main_bg_color:rgb(15, 15, 15);
+  --main_bg_color_2:rgb(40, 40, 40);
   --main_text_color:#fff;
   --main_text_color_2:rgb(136, 136, 136);
   --btn_color:rgb(34, 34, 34);
@@ -35,11 +35,17 @@ const GlobalStyles = createGlobalStyle`
 
   body{
     background-color: var(--main_bg_color);
+    font-family: sans-serif;
   }
   .btn-hover:hover{
     background-color:var(--btn_color) ;
   }
-  
+  .content{
+    display: flex;
+  }
+  .activeLink{
+    background-color:red!important;
+  }
 `
 
 export default GlobalStyles

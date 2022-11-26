@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { d_flex } from "../../Mixins";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import WestIcon from '@mui/icons-material/West';
+import WestIcon from "@mui/icons-material/West";
 
 const SearChContainer = styled.div`
   ${d_flex("row", "", "center", "")}
@@ -65,48 +65,55 @@ const SearChContainer = styled.div`
   input:focus + .innerSearchBtn {
     display: block;
   }
-  .go_back_btn{
+  .go_back_btn {
     display: none;
   }
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    display: ${props => props.active ? "flex":"none"};
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-radius: none;
+    height: 70px;
   
-  @media screen and (max-width: 700px) { 
-      display: none;
-      position: fixed;
-      left:0;top:0;
-      border-radius: none;
-      height: 70px;
-      width: 100%;  
-      padding: 0 30px;
-      background-color: var(--main_bg_color);
-      z-index: 999;
-        border-radius: 0;
-        border-bottom:1px solid var(--active_btn_color);
-      .go_back_btn{
-        display: block;
-        ${d_flex("row", "", "center", "center")}
-        margin-right: 10px;
-        background-color: transparent;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        svg{
-          color:var(--main_text_color)
-        }
-        transition: all .3s ease;
-        cursor: pointer;
-        &:hover{
-          background-color: var(--active_btn_color);
-        }
+    padding: 0 30px;
+    background-color: var(--main_bg_color);
+    z-index: 999;
+    border-radius: 0;
+    border-bottom: 1px solid var(--active_btn_color);
+    .go_back_btn {
+      display: block;
+      ${d_flex("row", "", "center", "center")}
+      margin-right: 10px;
+      background-color: transparent;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      svg {
+        color: var(--main_text_color);
       }
+      transition: all 0.3s ease;
+      cursor: pointer;
+      &:hover {
+        opacity: .8;
+      }
+      &:active {
+        background-color: var(--active_btn_color);
+        transform: scale(1.1);
+        -moz-transform: scale(1.1);
+      }
+    }
   }
 `;
 
-export default function Search() {
+export default function Search({active,setSearchActive}) {
   return (
-    <SearChContainer>
-       <button className="go_back_btn">
-          <WestIcon/>
-        </button>
+    <SearChContainer active={active}>
+      <button className="go_back_btn" onClick={()=>setSearchActive(false)}>
+        <WestIcon />
+      </button>
       <div className="searchcontent">
         <input type="text" name="search" placeholder="Search" />
         <button className="innerSearchBtn">

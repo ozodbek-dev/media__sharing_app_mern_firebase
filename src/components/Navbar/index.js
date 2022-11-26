@@ -1,5 +1,7 @@
-import Sidebar from "./Navbar";
-
+import Navbar from "./Navbar";
+import AccoutDetails from "./AccoutDetails";
+import NotificationsList from "./NotificationsList";
+import AddVideo from "./AddVideo";
 export {
-  Sidebar
+  Navbar,AccoutDetails,NotificationsList,AddVideo
 }
