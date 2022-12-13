@@ -15,6 +15,7 @@ const GlobalStyles = createGlobalStyle`
   --main_bg_color:rgb(15, 15, 15);
   --main_bg_color_2:rgb(40, 40, 40);
   --main_text_color:#fff;
+  --main_shadow_color:rgba(255,255,255,.3);
   --main_text_color_2:rgb(136, 136, 136);
   --btn_color:rgb(34, 34, 34);
   --active_btn_color:#3d3d3d;

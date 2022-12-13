@@ -6,18 +6,101 @@ import { HomeContainer, MediaList } from "./HomeStyle";
 export default function Home() {
   return (
     <HomeContainer>
-      <Link to="/">
         <MediaList>
-          <MediaCard />
-          <MediaCard />
-          <MediaCard />
-          <MediaCard />
-          <MediaCard />
-          <MediaCard />
-          <MediaCard />
-          <MediaCard />
+         <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+         <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+         <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+         <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+         <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+         <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+         <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+         <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+         <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+                  <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+                  <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+                  <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+                  <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+                  <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+                  <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+                  <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+                  <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+                  <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+                  <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+                  <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+                  <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+                  <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+                  <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+         <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+         <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+         <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+                  <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+                  <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+         <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+         <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
+         <Link to="/videos/asdfasdfafa">
+         <MediaCard />
+         </Link>
         </MediaList>
-      </Link>
     </HomeContainer>
   );
 }

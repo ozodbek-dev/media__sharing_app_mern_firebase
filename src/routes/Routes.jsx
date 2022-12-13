@@ -1,11 +1,16 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home/Home";
+import Video from '../pages/Video'
+
 
 export default function AllRoutes() {
   return (
-    <Routes>
+ <Fragment>
+     <Routes>
       <Route path="/" exact element={<Home />} />
+
+      <Route path="/videos/:id" element={<Video />}/>
       <Route
       path="*"
         element={
@@ -13,5 +18,6 @@ export default function AllRoutes() {
         }
       />
     </Routes>
+ </Fragment>
   );
 }
