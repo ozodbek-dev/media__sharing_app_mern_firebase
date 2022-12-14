@@ -1,4 +1,4 @@
 import styled from 'styled-components';
 
 export const VideoContainer = styled.div`
- margin-left: 30px;`
+ margin-left: 30pxNe;`

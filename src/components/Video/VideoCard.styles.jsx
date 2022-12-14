@@ -35,10 +35,9 @@ export const VideoFooter = styled.div`
     &__bottom {
       ${d_flex('row', '', 'center', 'space-between')}
       &_left {
-      ${d_flex('row', '', 'center', 'space-between')}
+        ${d_flex('row', '', 'center', 'space-between')}
         .profile {
           max-width: 300px;
-          border: 1px solid red;
           ${d_flex('row', '', '', 'space-between')}
           &_info {
             margin-left: 5px;
@@ -54,7 +53,6 @@ export const VideoFooter = styled.div`
               font-size: 1rem;
               padding-bottom: 10px;
               overflow: hidden;
-
             }
             .subs {
               color: var(--main_text_color_2);
@@ -63,9 +61,84 @@ export const VideoFooter = styled.div`
           }
         }
       }
+      &_right {
+        ${d_flex('row', '', 'center', 'space-between')}
+        .thumbs {
+          ${d_flex('row', '', 'center', 'space-between')}
+          background-color:var(--btn_color_2);
+          border-radius:20px ;
+        }
+      }
     }
   }
 `
 
-export const Btn = styled.button``
-export const Icon_Btn = styled.button``
+export const Btn = styled.button`
+  cursor:pointer;
+  font-size:14px;
+  border-radius:15px;
+  &.subscribe{
+    background-color:var(--main_text_color) ;
+    color:var(--main_bg_color);
+    padding:10px 15px ;
+    font-weight: bold;
+    margin-left:20px;
+    &:hover{
+      opacity:.8;
+    }
+    &:active{
+      opacity:1 ;
+    }
+  }
+  &.btn_1{
+    ${d_flex('row', '', 'center', 'space-between')}
+    color:var(--main_text_color);
+    background-color:var(--btn_color_2);
+    padding:5px 10px ;
+    border-radius:20px ;
+    margin-left:20px ;
+    span{
+      color:var(--main_text-color);
+      text-transform:capitalize ;3
+      margin-left: 5px;
+    }
+    svg{
+      transition:all .1s ;
+      font-size:26px ;
+      padding:2px;
+      color:var(--main_text_color);
+    }
+    transition: all .1s ease-in-out ;
+    &:hover{
+      background-color: var(--btn_hover_color);
+      
+    }
+   &:active{
+    svg{
+      transform: scale(1.1);
+    }
+    background-color:var(--active_btn_color) ;
+   }
+  }
+  &.btn_thumb_up{
+      position: relative;
+      margin-left:0 ;
+      border-top-right-radius:0;
+      border-bottom-right-radius:0;
+      margin-right:1px;
+      &::after{
+        position: absolute;
+        content:"";
+        right:0;
+        top:15%;
+        width: 1px;
+        height: 70%;
+        background-color:var(--btn_hover_color);
+      }
+  }
+  &.btn_thumb_down{
+    margin-left:0 ;
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+  }
+`

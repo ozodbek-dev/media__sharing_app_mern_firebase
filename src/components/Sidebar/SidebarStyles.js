@@ -89,6 +89,7 @@ export const Wrapper = styled.div`
 `
 export const SidebarPanelContainer = styled.div`
 position: fixed;
+width:70px ;
 left:${({ active }) => active ? "0" : "-100%"};
 height: 100%;
 margin-top: 60px;

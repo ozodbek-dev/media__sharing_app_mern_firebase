@@ -14,6 +14,8 @@ import ShareIcon from '@mui/icons-material/Share'
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd'
 import MoreVertIcon from '@mui/icons-material/MoreVert'
 import AvatarBtn from '../Navbar/AvatarBtn'
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
+import ContentCutIcon from '@mui/icons-material/ContentCut'
 function VideoCard() {
   return (
     <VideoCardContainer>
@@ -50,36 +52,44 @@ function VideoCard() {
             <div className="content__bottom_left">
               <Link to="/">
                 <div className="profile">
-                  <AvatarBtn/>
+                  <AvatarBtn />
                   <div className="profile_info">
                     <p className="name">Kishan Sheth</p>
                     <p className="subs">Kishan Sheth 9.38K subscribers</p>
                   </div>
                 </div>
               </Link>
-              <Btn className="">Subscribed</Btn>
-              <Icon_Btn>
+              <Btn className="subscribe">Subscribe</Btn>
+              <Btn className="btn_1">
                 <NotificationsNoneIcon />
-              </Icon_Btn>
+                <span>Subscribed</span>
+                <KeyboardArrowDownIcon />
+              </Btn>
             </div>
             <div className="content__bottom_right">
-              <div className="btns">
-                <Icon_Btn>
+              <div className="thumbs">
+                <Btn className="btn_1 btn_thumb_up">
                   <ThumbUpOffAltIcon />
-                </Icon_Btn>
-                <Icon_Btn>
+                  <span>2.2k</span>
+                </Btn>
+                <Btn className="btn_1 btn_thumb_down">
                   <ThumbDownOffAltIcon />
-                </Icon_Btn>
+                </Btn>
               </div>
-              <Icon_Btn>
+              <Btn className="btn_1">
                 <ShareIcon />
-              </Icon_Btn>
-              <Icon_Btn>
+              </Btn>
+              <Btn className="btn_1">
+                <ContentCutIcon />
+                <span>Clip</span>
+              </Btn>
+              <Btn className="btn_1">
                 <PlaylistAddIcon />
-              </Icon_Btn>
-              <Icon_Btn>
+                <span>save</span>
+              </Btn>
+              <Btn className="btn_1">
                 <MoreVertIcon />
-              </Icon_Btn>
+              </Btn>
             </div>
           </div>
         </div>

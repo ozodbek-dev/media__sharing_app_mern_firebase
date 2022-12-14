@@ -18,6 +18,8 @@ const GlobalStyles = createGlobalStyle`
   --main_shadow_color:rgba(255,255,255,.3);
   --main_text_color_2:rgb(136, 136, 136);
   --btn_color:rgb(34, 34, 34);
+  --btn_color_2:rgba(70,70,70,.8);
+  --btn_hover_color:rgba(100,100,100,.8);
   --active_btn_color:#3d3d3d;
   --search_input_color:rgb(18, 18, 18);
   --red_color:#bc0c0c;
