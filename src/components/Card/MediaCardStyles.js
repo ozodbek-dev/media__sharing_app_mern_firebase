@@ -84,3 +84,119 @@ export const MoreBtn = styled.button`
     display: block !important;
   }
 `;
+
+export const RelatedContainer = styled.div`
+border: 1px solid red;
+align-self: flex-start;
+
+`
+export const RelateCardContainer = styled.div`
+width: 100%;
+padding: 10px;
+position: relative;
+${d_flex('row','','center','')}
+
+
+.cover{
+  min-width: 150px;;
+  max-width: 250px;
+  border-radius:10px;
+  overflow: hidden;
+  img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+position: relative;
+span.duration{
+  position: absolute;
+  bottom:5px;
+  right:5px;
+  background-color: var(--main_bg_color_2);
+  color:var(--main_text_color);
+  font-size: 12px;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.iconbtns{
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top:5px;
+  right:5px;
+  ${d_flex('column','','center','')}
+  button{
+  ${d_flex('','','center','center')}
+
+    margin-bottom:3px;
+    border-radius: 5px;
+    background-color: var(--main_bg_color_2);
+    color:var(--main_text_color);
+    padding: 2px;
+    cursor:pointer
+    svg{
+      font-size: 20px;
+    }
+  }
+  transition: all .2s ease-in-out;
+}
+
+}
+.info{
+  padding: 0px 8px;
+  align-self: flex-start;
+  span{
+    &.title{
+      color:var(--main_text_color);
+      font-size: 14px;
+      font-weight: bold;
+      overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 2; 
+   -webkit-box-orient: vertical;
+    }
+   
+  }
+  h3{
+      font-size: 14px;
+      color:var(--main_text_color_2);
+      font-weight: 300;
+      padding: 10px 0 5px 0;
+    }
+    h4{
+      font-size: 12px;
+      color:var(--main_text_color_2);
+      font-weight: 300;
+      padding-bottom:5px;
+    }
+}
+&:hover{
+  .cover{
+    .iconbtns{
+  opacity: 1;
+  pointer-events: all;
+  }
+  }
+  .detailsBtn{
+    opacity: 1;
+  pointer-events: all;}
+}
+.detailsBtn{
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top:10px;
+  right:10px;
+  background-color: var(--main_bg_color);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  color:var(--main_text_color);
+  width:40px;
+  height:40px;
+  cursor:pointer;
+}
+`

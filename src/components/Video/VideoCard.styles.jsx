@@ -99,7 +99,7 @@ export const Btn = styled.button`
     margin-left:20px ;
     span{
       color:var(--main_text-color);
-      text-transform:capitalize ;3
+      text-transform:capitalize ;
       margin-left: 5px;
     }
     svg{
@@ -141,4 +141,13 @@ export const Btn = styled.button`
     border-top-left-radius:0;
     border-bottom-left-radius:0;
   }
+`;
+
+export const DescContainer = styled.div`
+  background-color: rgba(50,50,55,.8);
+  padding:10px 15px;
+  border-radius: 10px;
+  color:var(--main_text_color);
+  font-size: 0.8rem;
+  margin-top: 20px;
 `

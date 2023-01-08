@@ -4,7 +4,6 @@ import {
   Video,
   VideoFooter,
   Btn,
-  Icon_Btn,
 } from './VideoCard.styles'
 import { Link } from 'react-router-dom'
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone'
@@ -16,6 +15,8 @@ import MoreVertIcon from '@mui/icons-material/MoreVert'
 import AvatarBtn from '../Navbar/AvatarBtn'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import ContentCutIcon from '@mui/icons-material/ContentCut'
+import Desc from './Desc'
+import Comments from '../Comments/Comments'
 function VideoCard() {
   return (
     <VideoCardContainer>
@@ -94,6 +95,8 @@ function VideoCard() {
           </div>
         </div>
       </VideoFooter>
+      <Desc />
+      <Comments/>
     </VideoCardContainer>
   )
 }
