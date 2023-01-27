@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Signincontent from '../../components/Auth/SignIn/SignInConent.jsx'
 
 export default function Signin() {
   return (
-    <div>
-      
-    </div>
+    <Fragment>
+      <Signincontent/>
+    </Fragment>
   )
 }

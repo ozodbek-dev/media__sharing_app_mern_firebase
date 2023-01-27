@@ -13,9 +13,11 @@ const GlobalStyles = createGlobalStyle`
 
 :root{
   --main_bg_color:rgb(15, 15, 15);
+  --main_input_color:rgb(30, 30, 30);
   --main_bg_color_2:rgb(40, 40, 40);
   --main_text_color:#fff;
   --main_shadow_color:rgba(255,255,255,.3);
+  --main_shadow_color_2:rgba(255,255,255,.15);
   --main_text_color_2:rgb(136, 136, 136);
   --btn_color:rgb(34, 34, 34);
   --btn_color_2:rgba(70,70,70,.8);

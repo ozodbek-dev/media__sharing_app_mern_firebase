@@ -1,9 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import allLinks from "../../assets/sidebar/Links";
+import SignInBtn from "../Auth/SignIn/SignInBtn";
 import { Container, Wrapper, Content } from "./SidebarStyles";
 
 export default function Sidebar({ active }) {
+
+  const user = false;
+
   return (
     <Container active={active}>
       <Wrapper>
@@ -17,15 +21,22 @@ export default function Sidebar({ active }) {
           ))}
         </div>
 
-        <div className="list">
-          {allLinks.second.map((item) => (
-            <NavLink 
-            to={item.navlink} key={item.title}  >
-              <span className="icon">{item.icon}</span>
-              <span className="text">{item.title}</span>
-            </NavLink>
-          ))}
+       {
+        user ?  <div className="list">
+        {allLinks.second.map((item) => (
+          <NavLink 
+          to={item.navlink} key={item.title}  >
+            <span className="icon">{item.icon}</span>
+            <span className="text">{item.title}</span>
+          </NavLink>
+        ))}
+      </div>:<div className="signIn">
+        <p>
+        Sign in to like videos,<br /> comment, and subscribe.
+        </p>
+        <SignInBtn/>
         </div>
+       }
 
         <div className="list">
           <h3>Explore</h3>

@@ -16,4 +16,4 @@ const Related = () => {
   )
 }
 
-export default Related
+export default Related;

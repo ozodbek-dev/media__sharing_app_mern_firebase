@@ -2,7 +2,6 @@ import styled from "styled-components";
 export const Container = styled.div`
   margin: 70px 20px;
   padding:10px 20px ;
-  border:1px solid red ;
   margin-left: ${({active})=>active ? "225px":"70px"};
   transition: all .3s ease;
   width: 100%;
@@ -11,6 +10,5 @@ export const Container = styled.div`
   }
   @media screen and (max-width:600px){
    margin:70px 0;
-   
   }
 `

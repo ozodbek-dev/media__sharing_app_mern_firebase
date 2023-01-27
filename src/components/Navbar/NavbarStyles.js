@@ -13,6 +13,26 @@ export const Container = styled.div`
   ${d_flex("row", "", "center", "space-between")};
   border-bottom: 1px solid var(--btn_color);
   /* overflow: hidden; */
+  .signin{
+    ${d_flex('row','','center','')};
+   
+    button{
+    ${d_flex('','','center','center')};
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: transparent;
+      transition: all .3s ease-in;
+      margin-right: 5px;
+      cursor: pointer;
+      &>svg{
+    color:var(--main_text_color);
+    }
+    &:hover{
+      background-color: var(--btn_hover_color);
+    }
+    }
+  }
 `;
 
 export const Brand = styled.div`
@@ -31,6 +51,7 @@ export const Brand = styled.div`
     color: var(--red_color);
     margin-right: 8px;
   }
+ 
   @media screen and (max-width:430px){
    padding: 0;
   }

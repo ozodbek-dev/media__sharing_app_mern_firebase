@@ -85,6 +85,18 @@ export const Wrapper = styled.div`
     }
    }
 
+   .signIn{
+    ${d_flex('column','','flex-start','')};
+    color: var(--main_text_color);
+    p{
+      font: 400 13px sans-serif;
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+    padding: 20px 0;
+    padding-left:30px;
+   }
+
 
 `
 export const SidebarPanelContainer = styled.div`
