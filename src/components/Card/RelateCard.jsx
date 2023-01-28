@@ -19,7 +19,7 @@ const RelateCard = () => {
             </button>
           </div>
           <img
-            src="https://i.ytimg.com/an_webp/DHvLp61A-7M/mqdefault_6s.webp?du=3000&sqp=COLl6J0G&rs=AOn4CLC672LI94CUoAc9jizlIk5i4RcuZw"
+            src="https://images.unsplash.com/photo-1661961110372-8a7682543120?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxNnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
             alt="Zain"
           />
         </div>

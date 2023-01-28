@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import allLinks from "../../assets/sidebar/Links";
 import SignInBtn from "../Auth/SignIn/SignInBtn";
@@ -6,7 +7,8 @@ import { Container, Wrapper, Content } from "./SidebarStyles";
 
 export default function Sidebar({ active }) {
 
-  const user = false;
+  const { isLoggedIn } = useSelector((state) => state.user);
+
 
   return (
     <Container active={active}>
@@ -22,7 +24,7 @@ export default function Sidebar({ active }) {
         </div>
 
        {
-        user ?  <div className="list">
+        isLoggedIn ?  <div className="list">
         {allLinks.second.map((item) => (
           <NavLink 
           to={item.navlink} key={item.title}  >

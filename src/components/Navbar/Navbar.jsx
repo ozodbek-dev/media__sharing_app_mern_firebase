@@ -17,14 +17,14 @@ import AccoutDetails from './AccoutDetails'
 import { clickOutsideRef } from '../../utils/clickOutsideRefocus'
 import SignInBtn from '../Auth/SignIn/SignInBtn'
 import { More, MoreVert } from '@mui/icons-material'
+import { useSelector } from 'react-redux'
 
 export default function Navbar({ setActiveSidebar, setActiveSidebarPanel }) {
   const [searchActive, setSearchActive] = useState(false)
   const [activeUploadLinks, setActiveUploadLinks] = useState(false)
   const [activeNotifications, setActiveNotifications] = useState(false)
   const [activeUserDetails, setActiveUserDetails] = useState(false)
-
-  const user = false
+  const { isLoggedIn } = useSelector((state) => state.user);
 
   const whileClickMenuBtn = () => {
     setActiveSidebarPanel((prev) => !prev)
@@ -87,7 +87,7 @@ export default function Navbar({ setActiveSidebar, setActiveSidebarPanel }) {
           <KeyboardVoiceIcon />
         </Button>
       </Middle>
-      {user ? (
+      {isLoggedIn ? (
         <Left>
           <Button
             style={{ position: 'relative' }}

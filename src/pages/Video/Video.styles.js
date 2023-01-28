@@ -8,5 +8,8 @@ max-width: 100%;
  ${
   d_flex('','','center','space-between')
  }
+ @media screen and (max-width:1200px){
+  flex-direction: column;
+ }
  
  `

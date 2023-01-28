@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { Routes, Route } from "react-router-dom";
+import NotFound from "../components/NotFound/NotFound";
 import Signin from "../pages/auth/Signin";
 import SignUp from "../pages/auth/SignUp";
 import Home from "../pages/Home/Home";
@@ -18,7 +19,7 @@ export default function AllRoutes() {
       <Route
       path="*"
         element={
-          <h1 style={{ fontSize: "100px", color: "white" }}>Page not found</h1>
+         <NotFound/>
         }
       />
     </Routes>

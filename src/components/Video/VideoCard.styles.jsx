@@ -7,11 +7,20 @@ export const VideoCardContainer = styled.div`
 `
 
 export const Video = styled.iframe`
-  width: 1280px;
-  height: 720px;
+  width: 60vmax;
+  height: calc(720px * (3 / 4));
   box-shadow: 0 0 150px var(--main_shadow_color);
+  @media screen and (max-width:1200px){
+    width:90vw;
+  height: calc(720px * (3 / 4));
+  }
 `
 export const VideoFooter = styled.div`
+  width: 60vmax;
+
+  @media screen and (max-width:1200px){
+    width:90vw;
+  }
   .content {
     ${d_flex('column', '', '', '')};
     &__top {
@@ -33,6 +42,14 @@ export const VideoFooter = styled.div`
       }
     }
     &__bottom {
+      @media screen and (max-width:1300px) and (min-width: 1200px){
+    flex-direction: column!important;
+    align-items: flex-start;
+    gap: 1rem;
+    &_left,&_right{
+      width:100%;
+    }
+  }
       ${d_flex('row', '', 'center', 'space-between')}
       &_left {
         ${d_flex('row', '', 'center', 'space-between')}
@@ -66,7 +83,7 @@ export const VideoFooter = styled.div`
         .thumbs {
           ${d_flex('row', '', 'center', 'space-between')}
           background-color:var(--btn_color_2);
-          border-radius:20px ;
+          border-radius: 20px;
         }
       }
     }
@@ -74,80 +91,79 @@ export const VideoFooter = styled.div`
 `
 
 export const Btn = styled.button`
-  cursor:pointer;
-  font-size:14px;
-  border-radius:15px;
-  &.subscribe{
-    background-color:var(--main_text_color) ;
-    color:var(--main_bg_color);
-    padding:10px 15px ;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 15px;
+  &.subscribe {
+    background-color: var(--main_text_color);
+    color: var(--main_bg_color);
+    padding: 10px 15px;
     font-weight: bold;
-    margin-left:20px;
-    &:hover{
-      opacity:.8;
+    margin-left: 20px;
+    &:hover {
+      opacity: 0.8;
     }
-    &:active{
-      opacity:1 ;
+    &:active {
+      opacity: 1;
     }
   }
-  &.btn_1{
+  &.btn_1 {
     ${d_flex('row', '', 'center', 'space-between')}
     color:var(--main_text_color);
-    background-color:var(--btn_color_2);
-    padding:5px 10px ;
-    border-radius:20px ;
-    margin-left:20px ;
-    span{
-      color:var(--main_text-color);
-      text-transform:capitalize ;
+    background-color: var(--btn_color_2);
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-left: 20px;
+    span {
+      color: var(--main_text-color);
+      text-transform: capitalize;
       margin-left: 5px;
     }
-    svg{
-      transition:all .1s ;
-      font-size:26px ;
-      padding:2px;
-      color:var(--main_text_color);
+    svg {
+      transition: all 0.1s;
+      font-size: 26px;
+      padding: 2px;
+      color: var(--main_text_color);
     }
-    transition: all .1s ease-in-out ;
-    &:hover{
+    transition: all 0.1s ease-in-out;
+    &:hover {
       background-color: var(--btn_hover_color);
-      
     }
-   &:active{
-    svg{
-      transform: scale(1.1);
-    }
-    background-color:var(--active_btn_color) ;
-   }
-  }
-  &.btn_thumb_up{
-      position: relative;
-      margin-left:0 ;
-      border-top-right-radius:0;
-      border-bottom-right-radius:0;
-      margin-right:1px;
-      &::after{
-        position: absolute;
-        content:"";
-        right:0;
-        top:15%;
-        width: 1px;
-        height: 70%;
-        background-color:var(--btn_hover_color);
+    &:active {
+      svg {
+        transform: scale(1.1);
       }
+      background-color: var(--active_btn_color);
+    }
   }
-  &.btn_thumb_down{
-    margin-left:0 ;
-    border-top-left-radius:0;
-    border-bottom-left-radius:0;
+  &.btn_thumb_up {
+    position: relative;
+    margin-left: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: 1px;
+    &::after {
+      position: absolute;
+      content: '';
+      right: 0;
+      top: 15%;
+      width: 1px;
+      height: 70%;
+      background-color: var(--btn_hover_color);
+    }
   }
-`;
+  &.btn_thumb_down {
+    margin-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+`
 
 export const DescContainer = styled.div`
-  background-color: rgba(50,50,55,.8);
-  padding:10px 15px;
+  background-color: rgba(50, 50, 55, 0.8);
+  padding: 10px 15px;
   border-radius: 10px;
-  color:var(--main_text_color);
+  color: var(--main_text_color);
   font-size: 0.8rem;
   margin-top: 20px;
 `

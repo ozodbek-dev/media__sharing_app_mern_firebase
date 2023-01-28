@@ -5,6 +5,7 @@ export const Container = styled.div`
   margin-left: ${({active})=>active ? "225px":"70px"};
   transition: all .3s ease;
   width: 100%;
+  max-width:100%;
   @media screen and (max-width:1000px){
     margin: 70px 10px;
   }

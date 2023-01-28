@@ -61,11 +61,11 @@ function VideoCard() {
                 </div>
               </Link>
               <Btn className="subscribe">Subscribe</Btn>
-              <Btn className="btn_1">
+              {/* <Btn className="btn_1">
                 <NotificationsNoneIcon />
                 <span>Subscribed</span>
                 <KeyboardArrowDownIcon />
-              </Btn>
+              </Btn> */}
             </div>
             <div className="content__bottom_right">
               <div className="thumbs">
@@ -94,9 +94,10 @@ function VideoCard() {
             </div>
           </div>
         </div>
-      </VideoFooter>
-      <Desc />
+        <Desc />
       <Comments/>
+      </VideoFooter>
+    
     </VideoCardContainer>
   )
 }

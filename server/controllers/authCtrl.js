@@ -21,10 +21,10 @@ const signup = async (req ,res,next)=>{
 const signin = async (req ,res,next)=>{
   try {
     const user = await User.findOne({email:req.body.email});
-
     if(!user) return createError(404,"User Not Found!");
 
     const isCorrectPassword = await bcrypt.compare(req.body.password, user.password);
+
 
     if(!isCorrectPassword) return createError(400, "Wrong Credentials!");
 

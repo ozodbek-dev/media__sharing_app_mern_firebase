@@ -9,12 +9,14 @@ import videosRoutes from './routes/videosRoutes.js'
 import imagesRoutes from './routes/photosRoutes.js'
 import errorHandler from './utils/errorMiddleware.js'
 import cookieParser from "cookie-parser";
-
+import cors from 'cors'
 dotenv.config({path:"./config/config.env"})
 
 const app = express();
 
 //middlewares
+app.use(cors())
+app.use(express.urlencoded({extended:true}))
 app.use(cookieParser())
 app.use(express.json());
 
