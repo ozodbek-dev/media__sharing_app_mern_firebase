@@ -24,7 +24,7 @@ export default function Navbar({ setActiveSidebar, setActiveSidebarPanel }) {
   const [activeUploadLinks, setActiveUploadLinks] = useState(false)
   const [activeNotifications, setActiveNotifications] = useState(false)
   const [activeUserDetails, setActiveUserDetails] = useState(false)
-  const { isLoggedIn } = useSelector((state) => state.user);
+  const { isLoggedIn, user } = useSelector((state) => state.user);
 
   const whileClickMenuBtn = () => {
     setActiveSidebarPanel((prev) => !prev)
@@ -117,7 +117,7 @@ export default function Navbar({ setActiveSidebar, setActiveSidebarPanel }) {
             onClick={() => setActiveUserDetails((prev) => !prev)}
             ref={profile_toggle_ref}
           >
-            <AvatarBtn />
+            <AvatarBtn img={user.img} />
             <div ref={profile_ref}>
               <AccoutDetails active={activeUserDetails} />
             </div>

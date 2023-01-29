@@ -15,7 +15,7 @@ const accountDetailsObj = {
     { title: "Your channel", link: "/", icon: <AccountBoxOutlinedIcon /> },
     { title: "YouTube Studio", link: "/", icon: <SlowMotionVideoOutlinedIcon /> },
     { title: "Switch Account", link: "/", icon: <SwitchAccountOutlinedIcon />, options: ["nimadir"] },
-    { title: "Sing Out", link: "/", icon: <ExitToAppOutlinedIcon /> },
+    { title: "Sing Out", link: "/logout", icon: <ExitToAppOutlinedIcon /> },
   ],
   second: [
     { title: "Purchase and membership", link: "/", icon: <AttachMoneyOutlinedIcon /> },

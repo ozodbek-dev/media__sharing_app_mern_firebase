@@ -157,6 +157,7 @@ export const AuthMethodBtnContainer = styled.button`
     cursor: pointer;
     svg {
  transform: scale(1.1);
+ pointer-events: none;
   }
   }
 `;

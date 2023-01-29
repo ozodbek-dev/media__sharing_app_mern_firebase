@@ -12,7 +12,6 @@ const userSchema = new Schema({
   },
   password: {
     type: String,
-    required: true,
   },
   img: {
     type: String,
@@ -29,6 +28,10 @@ const userSchema = new Schema({
     default: false,
   },
   fromFaceBook: {
+    type: Boolean,
+    default: false,
+  },
+  fromGithub: {
     type: Boolean,
     default: false,
   },
